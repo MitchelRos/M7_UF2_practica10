@@ -1,8 +1,22 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import random
+
+def TenNumRandom():
+        Ten=[]
+        for x in range(10):
+                num=int(random.uniform(1, 100))
+                Ten.append(num)
+        return Ten
+def CambiameDelux():
+        ids=TenNumRandom()
+        Ciudades=[]
+        for x in ids:
+
+        return Ciudades
 
 
-def CityPopu(City):
+def CityPopu():
         cd_pp = pd.read_csv("List_B.csv", usecols=['City', 'Population'], low_memory=True)
         result = cd_pp[(cd_pp['City'] == City)]
         print(result)
