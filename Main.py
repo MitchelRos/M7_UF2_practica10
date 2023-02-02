@@ -1,11 +1,20 @@
 import Cerebros as cb
 
-Ciudad = 'Manila'
-
-PP = cb.CityPopu(Ciudad)
-print("---------------------------", PP)
-KM = cb.CityDensyKm(Ciudad)
+Ciudades = cb.TenRandom()
+print(Ciudades)
 print("---------------------------")
-M = cb.CityDensyM(Ciudad)
+PPT = cb.CityPopu(Ciudades)[0]
+PPV = cb.CityPopu(Ciudades)[1]
+print(PPT)
 print("---------------------------")
-cb.QuesitosGraph(PP, KM, M)
+KMT = cb.CityDensyKm(Ciudades)[0]
+KMV = cb.CityDensyKm(Ciudades)[1]
+print(KMT)
+print("---------------------------")
+MT = cb.CityDensyM(Ciudades)[0]
+MV = cb.CityDensyM(Ciudades)[1]
+print(MT)
+print("---------------------------")
+cb.QuesitosGraph(Ciudades, PPT, PPV)
+cb.QuesitosGraph(Ciudades, KMT, KMV)
+cb.QuesitosGraph(Ciudades, MT, MV)
